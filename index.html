@@ -16,8 +16,17 @@
 </head>
 
 <body>
-    <model-viewer alt="ar" src="bot.glb" camera-controls auto-rotate ar shadow-intensity="1"
-        touch-action="pan-y"></model-viewer>
+    <model-viewer src="bot.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1.47" auto-rotate>
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>
 </body>
 
 </html>
